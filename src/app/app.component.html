@@ -1,28 +1,28 @@
 <form class="form">
-  <h3>Responsive Registration Form</h3>
+  <h3>{{ title }}</h3>
 
-  <div class="input">
-    <mat-form-field appearance="standard">
+  <div class="input" [formGroup]="registrationFormGroup">
+    <mat-form-field appearance="outline">
       <mat-label>Email Address</mat-label>
-      <input matInput placeholder="email address" required>
+      <input matInput placeholder="email address" required formControlName="emailAddress">
+      <mat-error *ngIf="registrationFormGroup.controls['emailAddress'].errors!.required">This field can not be empty!</mat-error>
     </mat-form-field>
-    <mat-form-field appearance="standard" required>
+    <mat-form-field appearance="outline" required>
       <mat-label>Firstname</mat-label>
-      <input matInput placeholder="Placeholder" required>
+      <input matInput placeholder="Placeholder" required formControlName="firstName">
+      <mat-error *ngIf="registrationFormGroup.controls['firstName'].errors!.required">This field can not be empty!</mat-error>
     </mat-form-field>
-    <mat-form-field appearance="standard">
+    <mat-form-field appearance="outline">
       <mat-label>Lastname</mat-label>
-      <input matInput placeholder="Placeholder" required>
+      <input matInput placeholder="Placeholder" required formControlName="lastName">
+      <mat-error *ngIf="registrationFormGroup.controls['lastName'].errors!.required">This field can not be empty!</mat-error>
     </mat-form-field>
-    <mat-form-field appearance="standard">
-      <mat-label>Date of Birth</mat-label>
-      <input matInput placeholder="Placeholder" required>
-    </mat-form-field>
-    <mat-form-field appearance="standard">
+    <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput placeholder="Placeholder" required>
+      <input matInput placeholder="Placeholder" required formControlName="password">
+      <mat-error *ngIf="registrationFormGroup.controls['password'].errors!.required">This field can not be empty!</mat-error>
     </mat-form-field>
 
-    <button type="submit" mat-raised-button color="primary">Primary</button>
+    <button type="submit" mat-raised-button color="primary">Submit</button>
   </div>
 </form>
