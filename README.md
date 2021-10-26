@@ -1,3 +1,5 @@
+![form image](home/devenock/Desktop/projects/PERSONAL/angular-forms/my-form/dist/my-form/form.png)
+
 # MyForm
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
