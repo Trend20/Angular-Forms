@@ -1,4 +1,4 @@
-![form image](home/devenock/Desktop/projects/PERSONAL/angular-forms/my-form/dist/my-form/form.png)
+![form image](/src/assets/form.png)
 
 # MyForm
 
